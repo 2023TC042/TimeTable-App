@@ -1,0 +1,36 @@
+:root{
+  --cell-border:#dcdcdc;
+  --cell-bg:#ffffff;
+  --th-bg:#f3f6fb;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  margin:16px;
+  color:#111;
+  background:#fafafa;
+}
+
+header{display:flex;align-items:flex-end;gap:12px;margin-bottom:12px}
+header h1{margin:0;font-size:1.2rem}
+.hint{margin:0;color:#666;font-size:0.9rem}
+
+.table-wrap{overflow:auto;border:1px solid var(--cell-border);border-radius:6px;background:var(--cell-bg)}
+table{border-collapse:collapse;width:100%;min-width:720px}
+th, td{
+  border:1px solid var(--cell-border);
+  padding:10px;
+  text-align:left;
+  vertical-align:top;
+  min-width:120px;
+  height:84px;
+  position:relative;
+}
+th{background:var(--th-bg);font-weight:700;text-align:center}
+.tcell{cursor:pointer}
+.placeholder{color:#777;opacity:0.7;font-style:italic}
+@media(max-width:640px){
+  table{min-width:560px}
+  th,td{min-width:100px;height:72px;padding:8px}
+}
