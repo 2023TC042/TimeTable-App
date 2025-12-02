@@ -10,7 +10,7 @@
     // thead
     const thead = document.createElement("thead");
     const headRow = document.createElement("tr");
-    headRow.appendChild(document.createElement("th")); // 左上空白
+    headRow.appendChild(document.createElement("th"));
     DAYS.forEach(d => {
       const th = document.createElement("th");
       th.textContent = d;
@@ -34,7 +34,7 @@
         td.className = "tcell";
         const ph = document.createElement("div");
         ph.className = "placeholder";
-        ph.textContent = "（空）クリックしてテスト";
+        ph.textContent = "（空）";
         td.appendChild(ph);
 
         td.addEventListener("click", () => {
